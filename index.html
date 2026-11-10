@@ -316,6 +316,11 @@ footer{padding:28px 0 96px;text-align:center;color:var(--mute);font-size:14px}
       <label for="area">사는 곳</label>
       <input type="text" id="area" placeholder="예: 현풍, 구지">
       <button class="btn red" id="send" type="button">문자로 상담 신청하기</button>
+      <div id="smsFb" hidden style="margin-top:18px">
+        <p class="note" style="margin:0 0 8px">문자 앱이 열리지 않으면 아래 내용을 복사해 010-7545-0038 번호로 보내주세요.</p>
+        <textarea id="smsText" readonly rows="4" style="width:100%;padding:10px;font:inherit;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0"></textarea>
+        <div class="cta" style="margin-top:10px"><button class="btn" id="smsCopy" type="button" style="margin-top:0">내용 복사</button><a class="btn" id="smsLink" href="sms:01075450038" target="_top" style="margin-top:0">문자 앱 열기</a></div>
+      </div>
     </div>
     <a class="tel" href="tel:01075450038">010-7545-0038</a>
   </div>
@@ -331,7 +336,7 @@ document.getElementById('send').addEventListener('click',function(){
   var s=[].map.call(document.querySelectorAll('#subj input:checked'),function(i){return i.value}).join(', ')||'미정';
   var a=document.getElementById('area').value.trim()||'미입력';
   var body='[과외 상담 신청]\n학년: '+g+'\n과목: '+s+'\n지역: '+a+(window.__memo?'\n메모: '+window.__memo:'');
-  location.href='sms:01075450038?&body='+encodeURIComponent(body);
+  openSms(body);
 });
 (function(){
 var d=document,r=d.documentElement;r.classList.add('js');
@@ -354,6 +359,19 @@ function upd(){var a=$('#q1 input:checked'),b=$('#q2 input:checked');if(!a||!b)r
 $('#useRes').onclick=function(){$$('#subj input').forEach(function(c){c.checked=(c.value===b.value)});window.__memo=a.value+' / '+recs[i][0];$('#apply').scrollIntoView({behavior:rm?'auto':'smooth'});toast('선택한 내용이 신청서에 담겼어요')}}
 $$('#q1 input,#q2 input').forEach(function(x){x.onchange=upd});
 $('#send').addEventListener('click',function(){toast('문자 앱을 여는 중입니다')});
+window.openSms=function(body){
+  var ios=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var url='sms:01075450038'+(ios?'&':'?')+'body='+encodeURIComponent(body);
+  var a=$('#smsLink');a.href=url;a.target='_top';
+  $('#smsText').value=body;$('#smsFb').hidden=false;
+  try{a.click()}catch(e){}
+};
+$('#smsCopy').onclick=function(){
+  var t=$('#smsText');
+  var ok=function(){toast('복사했어요. 문자 앱에 붙여넣어 보내주세요')};
+  var old=function(){t.select();try{document.execCommand('copy');ok()}catch(e){toast('내용을 길게 눌러 복사해주세요')}};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(ok,old)}else{old()}
+};
 })();
 </script>
 </body>
