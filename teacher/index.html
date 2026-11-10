@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>현풍·구지 1:1 맞춤 과외 | 국어 영어 수학 과학</title>
+<meta name="description" content="대구 현풍·구지 지역 1:1 맞춤 과외. 국어·영어·수학·과학, 중등 월 15만원~ / 고등 월 20만원~. 지금 무료 상담.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbfaf6;--ink:#1c2233;--red:#d92b38;--hl:#ffe45c;--grid:#d6e3f1;--card:#fff;--mute:#5b6477;--line:#1c2233;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#171a24;--ink:#f1efe8;--red:#ff5560;--hl:#d9b800;--grid:#262c3c;--card:#1f2331;--mute:#a4abbd;--line:#f1efe8}
+}
+:root[data-theme="dark"]{--paper:#171a24;--ink:#f1efe8;--red:#ff5560;--hl:#d9b800;--grid:#262c3c;--card:#1f2331;--mute:#a4abbd;--line:#f1efe8}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.7 "Noto Sans KR",system-ui,sans-serif;word-break:keep-all}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-weight:400;margin:0;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* hero: exam paper */
+.hero{padding:52px 0 68px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260' fill='none' stroke-linecap='round' stroke-linejoin='round'><g transform='rotate(-35 60 60)'><rect x='24' y='52' width='62' height='14' fill='%23ffd23f' stroke='%231c2233' stroke-opacity='.5' stroke-width='2'/><path d='M86 52l17 7-17 7z' fill='%23f3d9b1' stroke='%231c2233' stroke-opacity='.5' stroke-width='2'/><rect x='14' y='52' width='10' height='14' fill='%23d92b38' stroke='%231c2233' stroke-opacity='.5' stroke-width='2'/></g><g transform='translate(160 24) rotate(8)'><rect width='56' height='42' rx='3' fill='%23d92b38' fill-opacity='.4' stroke='%231c2233' stroke-opacity='.5' stroke-width='2'/><path d='M28 0v42M8 12h12M8 20h12' stroke='%231c2233' stroke-opacity='.5' stroke-width='2'/></g><text x='14' y='160' font-family='sans-serif' font-weight='bold' font-size='22' fill='%236b7fa3' fill-opacity='.7' transform='rotate(-8 14 160)'>x²+y²=r²</text><g transform='translate(190 170)' stroke='%236b7fa3' stroke-opacity='.7' stroke-width='2'><ellipse rx='26' ry='10'/><ellipse rx='26' ry='10' transform='rotate(60)'/><ellipse rx='26' ry='10' transform='rotate(120)'/><circle r='4' fill='%23d92b38' stroke='none'/></g><text x='96' y='236' font-family='sans-serif' font-weight='bold' font-size='26' fill='%23d92b38' fill-opacity='.65'>A+</text><ellipse cx='114' cy='228' rx='26' ry='16' stroke='%23d92b38' stroke-opacity='.65' stroke-width='2.5'/><path d='M120 110l8 24 10-12 12 8-6-22z' fill='%23ffd23f' fill-opacity='.8' stroke='%231c2233' stroke-opacity='.4' stroke-width='1.5'/><text x='30' y='238' font-family='sans-serif' font-size='20' font-weight='bold' fill='%236b7fa3' fill-opacity='.7'>π</text></svg>"),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:260px 260px,28px 28px,28px 28px}
+.sheet{background:var(--card);border:2px solid var(--line);padding:28px 22px 30px;position:relative;box-shadow:6px 6px 0 var(--line)}
+.meta{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--mute);border-bottom:1.5px dashed var(--mute);padding-bottom:10px;margin-bottom:22px}
+.big{font-size:clamp(76px,22vw,170px);color:var(--red);letter-spacing:-.02em;position:relative;display:inline-block}
+.big svg{position:absolute;inset:-6% -5%;width:110%;height:112%;pointer-events:none;overflow:visible}
+.big path{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s .5s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.lead{font-size:clamp(22px,5.4vw,34px);font-weight:700;margin:14px 0 6px;line-height:1.35}
+.lead mark{background:linear-gradient(transparent 55%,var(--hl) 55%);color:inherit;padding:0 2px}
+.subs{font-weight:700;font-size:19px;margin:0 0 20px}
+.price{display:inline-block;border:2px dashed var(--ink);border-radius:40px;padding:10px 22px;font-weight:700;font-size:clamp(17px,4.4vw,23px);margin:0 0 22px}
+.price b{color:var(--red)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font:700 18px "Noto Sans KR",sans-serif;text-decoration:none;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{transform:translate(-1px,-1px)}
+
+section{padding:56px 0}
+h2{font-size:clamp(28px,6.5vw,42px);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 28px}
+
+/* checklist */
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.checks li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:2px solid var(--line);padding:14px 16px;font-weight:500}
+.checks li::before{content:"✔";flex:none;width:28px;height:28px;display:grid;place-items:center;border:2px solid var(--red);border-radius:50%;color:var(--red);font-weight:700;font-size:15px;margin-top:1px}
+
+/* subjects */
+.subjects{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.subjects div{background:var(--ink);color:var(--paper);text-align:center;padding:22px 6px;font:400 clamp(20px,5vw,30px) "Black Han Sans",sans-serif}
+
+/* price table */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plan{background:var(--card);border:2px solid var(--line);padding:22px 18px;text-align:center}
+.plan.hi{border-color:var(--red);box-shadow:5px 5px 0 var(--red)}
+.plan h3{margin:0 0 6px;font-size:20px}
+.plan .won{font:400 clamp(30px,8vw,46px) "Black Han Sans",sans-serif;color:var(--red);line-height:1.2}
+.plan p{margin:6px 0 0;color:var(--mute);font-size:15px}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;border-left:3px solid var(--red);margin-left:10px}
+.steps li{padding:2px 0 22px 24px;position:relative}
+.steps li::before{content:"";position:absolute;left:-11px;top:8px;width:19px;height:19px;border-radius:50%;background:var(--paper);border:3px solid var(--red)}
+.steps b{display:block;font-size:19px}
+.steps span{color:var(--mute)}
+
+/* area */
+.area{background:var(--ink);color:var(--paper)}
+.area .sub{color:inherit;opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:2px solid var(--paper);padding:8px 18px;font-weight:700}
+
+/* form */
+.box{background:var(--card);border:2px solid var(--line);padding:22px 18px;box-shadow:6px 6px 0 var(--line)}
+label,.lab{display:block;font-weight:700;margin:16px 0 8px}
+label:first-child{margin-top:0}
+select,input[type=text]{width:100%;min-height:48px;padding:0 12px;font:inherit;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{margin:0;font-weight:500}
+.opts input{position:absolute;opacity:0}
+.opts span{display:inline-block;padding:9px 16px;border:2px solid var(--line);cursor:pointer;min-height:44px}
+.opts input:checked+span{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
+.opts input:focus-visible+span{outline:3px solid var(--red);outline-offset:3px}
+.box .btn{width:100%;margin-top:22px}
+.tel{font:400 clamp(34px,9vw,58px) "Black Han Sans",sans-serif;color:var(--red);text-decoration:none;display:block;margin-top:26px;text-align:center}
+
+.prof{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:start}
+.id{background:var(--ink);color:var(--paper);padding:26px 16px;text-align:center}
+.id .mono{width:96px;height:96px;margin:0 auto 14px;border-radius:50%;border:3px solid var(--hl);display:grid;place-items:center;font:400 40px "Black Han Sans",sans-serif;color:var(--hl)}
+.id b{display:block;font-size:20px}
+.id span{font-size:14px;opacity:.85}
+.fill{background:var(--hl);color:#1c2233;padding:0 4px;font-weight:700}
+.career{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.career li{background:var(--card);border:2px solid var(--line);padding:12px 16px}
+.career small{display:block;color:var(--red);font-weight:700;font-size:14px}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.vals div{border-top:4px solid var(--red);background:var(--card);padding:14px 14px 16px;border-left:2px solid var(--line);border-right:2px solid var(--line);border-bottom:2px solid var(--line)}
+.vals b{display:block;font-size:18px;margin-bottom:4px}
+.vals p{margin:0;font-size:15px;color:var(--mute);line-height:1.6}
+.cur{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.cur div{background:var(--card);border:2px solid var(--line);padding:16px}
+.cur b{display:block;font-size:19px;margin-bottom:4px}
+.cur p{margin:0;font-size:15px;color:var(--mute);line-height:1.65}
+details{background:var(--card);border:2px solid var(--line);margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:14px 16px;min-height:48px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--red);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0;padding:0 16px 16px;color:var(--mute)}
+@media (max-width:640px){.prof{grid-template-columns:1fr}.vals,.cur{grid-template-columns:1fr}}
+h2,.lead{text-wrap:balance}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:19}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:10px;padding:10px 20px;background:color-mix(in srgb,var(--paper) 84%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:2px solid var(--line)}
+.logo{font:400 20px "Black Han Sans",sans-serif;text-decoration:none;margin-right:auto}
+.links{display:flex;gap:4px;align-items:center}
+.links a{padding:8px 12px;text-decoration:none;font-weight:700;font-size:15px}
+.links a.on{color:var(--red)}
+.links a.btn{color:#fff;padding:0 16px;min-height:40px;font-size:15px}
+#theme{width:40px;height:40px;border:2px solid var(--line);background:var(--card);color:var(--ink);font-size:18px;cursor:pointer}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--red);transform-origin:0 0;transform:scaleX(0);z-index:30}
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:12px 20px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:40;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+.subjects div{cursor:pointer;transition:background .2s,transform .2s}
+.subjects div:hover{transform:translateY(-3px)}
+.subjects div.on{background:var(--red);color:#fff}
+.cur.js div{display:none}
+.cur.js div.on{display:block;grid-column:1/-1;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.res{margin-top:22px;border:2px solid var(--red);background:color-mix(in srgb,var(--hl) 35%,var(--card));padding:16px 18px;animation:pop .35s}
+.res b{font-size:19px}
+.res p{margin:6px 0 0}
+.res .btn{margin-top:14px}
+@media (max-width:640px){.links a:not(.btn){display:none}}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.cur.js div.on,.res{animation:none}}
+footer{padding:28px 0 96px;text-align:center;color:var(--mute);font-size:14px}
+.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:4px 4px 0 var(--line)}
+
+@media (max-width:560px){
+  .subjects{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr}
+  .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){.big path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="bar"></div>
+<nav class="nav" aria-label="주요 메뉴">
+  <a class="logo" href="#top">현풍·구지 과외</a>
+  <div class="links"><a href="#about">소개</a><a href="#subjects">과목</a><a href="#fee">수업료</a><a href="#faq">질문</a><a class="btn red" href="#apply">상담 신청</a></div>
+  <button id="theme" type="button" aria-label="화면 밝기 전환">◐</button>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="sheet">
+      <div class="meta"><span>대구 달성군 현풍 · 구지</span><span>중등 · 고등 1:1 맞춤 수업</span></div>
+      <div class="big">1:1 과외
+        <svg viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M20 62 C10 20 150 2 260 8 C380 14 395 90 300 108 C190 124 30 118 16 70 C12 50 40 34 70 28"/></svg>
+      </div>
+      <p class="lead">성적이 안 오르던 아이,<br><mark>한 명씩 끝까지</mark> 가르칩니다</p>
+      <p class="subs">국어 · 영어 · 수학 · 과학</p>
+      <div class="price">중등 <b>월 15만원~</b> / 고등 <b>월 20만원~</b></div>
+      <div class="cta">
+        <a class="btn red" href="tel:01075450038">전화 상담 010-7545-0038</a>
+        <a class="btn" href="#apply">문자 상담 신청</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>이런 학생이라면, 지금이 시작할 때입니다</h2>
+    <p class="sub">하나라도 해당되면 상담을 받아보세요.</p>
+    <ul class="checks">
+      <li>학원을 다녀도 성적에 변화가 없는 학생</li>
+      <li>자기주도 학습이 필요한 학생</li>
+      <li>학교·학원 수업을 따라가기 힘든 학생</li>
+      <li>최상위권 심화과정 수업이 필요한 학생</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>선생님 소개</h2>
+    <p class="sub">누가 가르치는지 먼저 확인하세요.</p>
+    <div class="prof">
+      <div class="id"><div class="mono">선</div><b><span class="fill">○○○</span> 선생님</b><span>서울 최상위 명문대 출신</span></div>
+      <ul class="career">
+        <li><small>학력</small><span class="fill">○○대학교 ○○학과 졸업</span></li>
+        <li><small>지도 경력</small><span class="fill">○○ 과외·학원 강사 ○년</span></li>
+        <li><small>지도 실적</small><span class="fill">내신 ○○점 향상, ○○고 합격 등</span></li>
+        <li><small>자격·수상</small><span class="fill">자격증, 수상 내역</span></li>
+      </ul>
+    </div>
+    <div class="vals">
+      <div><b>눈높이 진단</b><p>지금 어디서 막혔는지 먼저 찾고, 거기서부터 시작합니다.</p></div>
+      <div><b>1:1 집중</b><p>다른 학생 눈치 볼 필요 없이 이해될 때까지 묻고 배웁니다.</p></div>
+      <div><b>스스로 하는 힘</b><p>답을 알려주기보다 혼자 풀어내는 공부법을 몸에 익힙니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>가르치는 과목</h2>
+    <p class="sub">서울 최상위 명문대 출신 선생님이 직접 수업합니다.</p>
+    <div class="subjects"><div>국어</div><div>영어</div><div>수학</div><div>과학</div></div>
+    <div class="cur">
+      <div><b>국어</b><p>비문학 독해력, 문학 작품 분석, 문법 개념 정리, 서술형 답안 작성까지 단계별로 지도합니다.</p></div>
+      <div><b>영어</b><p>어휘·문법 기초, 독해 속도와 정확도, 내신 서술형과 듣기 대비를 함께 잡습니다.</p></div>
+      <div><b>수학</b><p>개념 이해에서 유형 정복, 심화·킬러 문항까지. 틀린 문제는 원인을 분석해 다시 풉니다.</p></div>
+      <div><b>과학</b><p>핵심 개념과 암기 포인트 정리, 실험·계산 문제 훈련, 학교 시험 범위에 맞춘 대비를 합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>수업 방식</h2>
+    <p class="sub">명문대 선생님의 경험과 노하우로 1:1 맞춤수업, 단기간 내 성적 향상을 목표로 합니다.</p>
+    <ol class="steps">
+      <li><b>무료 상담</b><span>현재 성적과 고민, 목표를 먼저 듣습니다.</span></li>
+      <li><b>학습 진단</b><span>어디서 막히는지 정확히 찾아냅니다.</span></li>
+      <li><b>1:1 맞춤 수업</b><span>학생 수준에 맞춰 진도와 난이도를 조절합니다.</span></li>
+      <li><b>점검과 피드백</b><span>배운 내용을 확인하고 다음 수업에 바로 반영합니다.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>수업료</h2>
+    <p class="sub">과목 수와 횟수에 따라 달라집니다. 상담 시 정확히 안내드립니다.</p>
+    <div class="plans">
+      <div class="plan"><h3>중등</h3><div class="won">월 15만원~</div><p>내신 · 기초 다지기</p></div>
+      <div class="plan hi"><h3>고등</h3><div class="won">월 20만원~</div><p>내신 · 심화과정</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <h2>수업 지역</h2>
+    <p class="sub">대구 달성군 현풍 · 구지 지역 학생을 만납니다.</p>
+    <div class="chips"><span>현풍</span><span>구지</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>자주 묻는 질문</h2>
+    <p class="sub">학부모님들이 가장 많이 물어보시는 내용입니다.</p>
+    <details><summary>수업은 어디서, 일주일에 몇 번 하나요?</summary><p>학생 일정과 지역에 맞춰 장소와 횟수를 정합니다. 상담 때 편한 방식을 말씀해 주세요.</p></details>
+    <details><summary>여러 과목을 함께 들을 수 있나요?</summary><p>국어·영어·수학·과학 중 원하는 과목을 조합할 수 있고, 수업료는 과목과 횟수에 따라 안내드립니다.</p></details>
+    <details><summary>학원을 다니고 있어도 가능한가요?</summary><p>학원 수업을 따라가기 힘들거나 성적 변화가 없는 학생에게 특히 잘 맞습니다. 학원 진도를 보완하는 방식으로 진행합니다.</p></details>
+    <details><summary>상담은 비용이 드나요?</summary><p>상담은 무료입니다. 현재 성적과 목표를 듣고 맞는 수업 방향을 먼저 말씀드립니다.</p></details>
+    <details><summary>수업료는 어떻게 되나요?</summary><p>중등 월 15만원부터, 고등 월 20만원부터 시작합니다. 과목과 횟수에 따라 달라집니다.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>우리 아이 맞춤 수업 찾기</h2>
+    <p class="sub">두 가지만 고르면 어떤 수업이 맞는지 알려드려요.</p>
+    <div class="box">
+      <div class="lab">1. 가장 큰 고민은 무엇인가요?</div>
+      <div class="opts" id="q1">
+        <label><input type="radio" name="q1" value="학원을 다녀도 성적이 그대로예요"><span>학원을 다녀도 성적이 그대로</span></label>
+        <label><input type="radio" name="q1" value="혼자 공부하는 법을 모르겠어요"><span>혼자 공부하는 법을 모름</span></label>
+        <label><input type="radio" name="q1" value="수업을 따라가기 힘들어요"><span>수업을 따라가기 힘듦</span></label>
+        <label><input type="radio" name="q1" value="상위권 심화가 필요해요"><span>상위권 심화가 필요함</span></label>
+      </div>
+      <div class="lab">2. 먼저 잡고 싶은 과목은요?</div>
+      <div class="opts" id="q2">
+        <label><input type="radio" name="q2" value="국어"><span>국어</span></label>
+        <label><input type="radio" name="q2" value="영어"><span>영어</span></label>
+        <label><input type="radio" name="q2" value="수학"><span>수학</span></label>
+        <label><input type="radio" name="q2" value="과학"><span>과학</span></label>
+      </div>
+      <div class="res" id="res" aria-live="polite" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section id="apply">
+  <div class="wrap">
+    <h2>무료 상담 신청</h2>
+    <p class="sub">선택하고 버튼을 누르면 문자 앱이 열립니다. 바로 답변드릴게요.</p>
+    <div class="box">
+      <label for="grade">학년</label>
+      <select id="grade">
+        <option>중1</option><option>중2</option><option>중3</option>
+        <option>고1</option><option>고2</option><option>고3</option>
+      </select>
+      <div class="lab">희망 과목 (여러 개 선택 가능)</div>
+      <div class="opts" id="subj">
+        <label><input type="checkbox" value="국어"><span>국어</span></label>
+        <label><input type="checkbox" value="영어"><span>영어</span></label>
+        <label><input type="checkbox" value="수학"><span>수학</span></label>
+        <label><input type="checkbox" value="과학"><span>과학</span></label>
+      </div>
+      <label for="area">사는 곳</label>
+      <input type="text" id="area" placeholder="예: 현풍, 구지">
+      <button class="btn red" id="send" type="button">문자로 상담 신청하기</button>
+    </div>
+    <a class="tel" href="tel:01075450038">010-7545-0038</a>
+  </div>
+</section>
+
+<footer><div class="wrap">현풍 · 구지 1:1 맞춤 과외 · 국어 영어 수학 과학</div></footer>
+
+<a class="btn red float" href="tel:01075450038" aria-label="전화 상담">전화 상담</a>
+
+<script>
+document.getElementById('send').addEventListener('click',function(){
+  var g=document.getElementById('grade').value;
+  var s=[].map.call(document.querySelectorAll('#subj input:checked'),function(i){return i.value}).join(', ')||'미정';
+  var a=document.getElementById('area').value.trim()||'미입력';
+  var body='[과외 상담 신청]\n학년: '+g+'\n과목: '+s+'\n지역: '+a+(window.__memo?'\n메모: '+window.__memo:'');
+  location.href='sms:01075450038?&body='+encodeURIComponent(body);
+});
+(function(){
+var d=document,r=d.documentElement;r.classList.add('js');
+var $=function(s){return d.querySelector(s)},$$=function(s){return[].slice.call(d.querySelectorAll(s))};
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('show')},2600)}
+var ids=['why','about','subjects','method','fee','area','faq','find'];
+$$('body>section').forEach(function(s,i){if(ids[i])s.id=ids[i]});
+var bar=$('#bar');function sc(){var h=r.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')'}
+addEventListener('scroll',sc,{passive:true});sc();
+$('#theme').onclick=function(){var t=r.getAttribute('data-theme');var dark=t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.setAttribute('data-theme',dark?'light':'dark')};
+if(!rm&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});$$('h2,.checks li,.plan,.vals div,.steps li,details,.box,.career li,.id').forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)})}
+if('IntersectionObserver' in window){var links=$$('.links a[href^="#"]');var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});$$('body>section[id]').forEach(function(s){so.observe(s)})}
+var sb=$$('.subjects div'),cd=$$('.cur div'),cur=$('.cur');
+if(cur&&sb.length===cd.length){cur.classList.add('js');sb.forEach(function(b,i){b.setAttribute('role','button');b.tabIndex=0;var go=function(){sb.forEach(function(x,j){x.classList.toggle('on',i===j);cd[j].classList.toggle('on',i===j)})};b.onclick=go;b.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}};if(i===0)go()})}
+var sh=$('.sheet'),hero=$('.hero');
+if(sh&&!rm&&matchMedia('(hover:hover)').matches){sh.style.transition='transform .2s';hero.addEventListener('pointermove',function(e){var b=hero.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;sh.style.transform='perspective(900px) rotateY('+x*4+'deg) rotateX('+(-y*4)+'deg)'});hero.addEventListener('pointerleave',function(){sh.style.transform=''})}
+var recs=[['빈틈 진단 수업','학원 수업에서 놓친 부분을 먼저 찾아내고, 그 빈틈부터 채워 나갑니다.'],['자기주도 코칭','스스로 계획하고 풀어내는 공부법을 수업 속에서 함께 익힙니다.'],['눈높이 기초 수업','개념부터 다시 쌓아, 이해될 때까지 속도를 맞춰 가르칩니다.'],['심화 집중 수업','고난도 문항과 서술형을 중심으로 최상위권 실력을 만듭니다.']];
+function upd(){var a=$('#q1 input:checked'),b=$('#q2 input:checked');if(!a||!b)return;var i=$$('#q1 input').indexOf(a),res=$('#res');res.hidden=false;res.innerHTML='<b>추천 수업: '+b.value+' · '+recs[i][0]+'</b><p>'+recs[i][1]+'</p><button class="btn red" id="useRes" type="button">이 내용으로 상담 신청</button>';
+$('#useRes').onclick=function(){$$('#subj input').forEach(function(c){c.checked=(c.value===b.value)});window.__memo=a.value+' / '+recs[i][0];$('#apply').scrollIntoView({behavior:rm?'auto':'smooth'});toast('선택한 내용이 신청서에 담겼어요')}}
+$$('#q1 input,#q2 input').forEach(function(x){x.onchange=upd});
+$('#send').addEventListener('click',function(){toast('문자 앱을 여는 중입니다')});
+})();
+</script>
+</body>
+</html>
